@@ -58,19 +58,19 @@ public class MainConfig extends JFinalConfig {
 	@Override
 	public void configPlugin(Plugins me) {
 		//配置数据库连接池插件
-		DruidPlugin dbPlugin=new DruidPlugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password"));
+		/*DruidPlugin dbPlugin=new DruidPlugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password"));
 		//orm映射 配置ActiveRecord插件
 		ActiveRecordPlugin arp=new ActiveRecordPlugin(dbPlugin);
 		arp.setShowSql(PropKit.getBoolean("devMode"));
 		arp.setDialect(new MysqlDialect());
 		dbPlugin.setDriverClass("com.mysql.jdbc.Driver");
-		/********在此添加数据库 表-Model 映射*********/
+		*//********在此添加数据库 表-Model 映射*********//*
 		//如果使用了JFinal Model 生成器 生成了BaseModel 把下面注释解开即可
 		//_MappingKit.mapping(arp);
 		
 		//添加到插件列表中
 		me.add(dbPlugin);
-		me.add(arp);
+		me.add(arp);*/
 	}
 	/**
 	 * 配置全局拦截器
@@ -98,7 +98,7 @@ public class MainConfig extends JFinalConfig {
 	}
 	
 	public static void main(String[] args) {
-		JFinal.start("WebRoot", 80, "/", 5);
+		JFinal.start("WebRoot", 80, "/");
 	}
 	
 
