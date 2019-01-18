@@ -9,6 +9,7 @@ import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
 import com.jfinal.kit.PropKit;
 import com.jfinal.template.Engine;
+import com.liu.common.hbase.HbaseTest;
 import com.jfinal.ext.interceptor.SessionInViewInterceptor;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.json.FastJsonFactory;
@@ -46,7 +47,7 @@ public class MainConfig extends JFinalConfig {
 	 */
 	@Override
 	public void configRoute(Routes me) {
-
+		me.add("/", HbaseTest.class,"/");
 	}
 	/**
 	 * 配置JFinal插件
